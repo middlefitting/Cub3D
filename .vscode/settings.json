@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"libft.h": "c",
+		"execute.h": "c",
+		"mlx.h": "c"
+	}
+}
