@@ -2,6 +2,13 @@
 	"files.associations": {
 		"libft.h": "c",
 		"execute.h": "c",
-		"mlx.h": "c"
+		"mlx.h": "c",
+		"ios": "c",
+		"constant.h": "c",
+		"array": "c",
+		"string": "c",
+		"string_view": "c",
+		"vector": "c",
+		"struct.h": "c"
 	}
 }

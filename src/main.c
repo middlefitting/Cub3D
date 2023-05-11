@@ -1,4 +1,4 @@
-#include "cub3d.h"
+#include "execute.h"
 
 int main(void)
 {

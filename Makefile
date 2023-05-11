@@ -1,7 +1,12 @@
 NAME		=	cub3D
 
 SRC_FILES	=	main.c \
-				/executer/executer.c
+				/lib/error.c \
+				/executer/executer.c \
+				/executer/init/init_game_data.c \
+				/executer/init/init_ray.c \
+				/executer/init/init_texture.c
+
 SRC_DIR		=	src/
 
 SCRS		=	$(addprefix $(SRC_DIR), $(SRC_FILES))
@@ -14,13 +19,15 @@ MLX			=	mlx/libmlx.a
 
 MLX_DIR		=	mlx
 
-MLX_FLAGS	=	-framework OpenGL -framework Appkit
+# MLX_FLAGS	=	-framework OpenGL -framework Appkit
+
+MLX_FLAGS	=	-lz -framework OpenGL -framework Appkit
 
 LIBFT 		= 	libft/libft.a
 
 LIB_DIR		=	libft
 
-CC			=	cc
+CC			=	cc -g
 
 CFLAGS		=	-Wall -Wextra -Werror
 
