@@ -52,7 +52,7 @@ void	sample(t_info *info)
 void	calloc_data(t_data **data)
 {
 	*data = ft_calloc(1, sizeof(t_data));
-	malloc_check(data);
+	malloc_check(*data);
 }
 
 void	executer(t_info *info) {
@@ -63,4 +63,6 @@ void	executer(t_info *info) {
 	//
 	calloc_data(&data);
 	init_game_data(data, info);
+	mlx_loop_hook(data->window.mlx, &game, data);
+	mlx_loop(data->window.mlx);
 }

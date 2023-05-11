@@ -19,6 +19,8 @@ void	init_window(t_window *window)
 	null_check(window->img.img, "mlx new image failed");
 	window->img.data = (int *) mlx_get_data_addr(window->img.img, &window->img.bpp, &window->img.size_l, &window->img.endian);
 	null_check(window->img.data, "mlx get data addr failed");
+	//title mlx -> cub3d로 수정하기
+	window->win = mlx_new_window(window->mlx, GAME_WIDTH, GAME_HEIGHT, "mlx");
 }
 
 void	init_game_data(t_data *data, t_info *info)
