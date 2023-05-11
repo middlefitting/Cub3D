@@ -2,27 +2,34 @@
 # define CUB3D_H
 #include "../libft/libft.h"
 #include "../mlx/mlx.h"
-#include "execute.h"
+#include "constant.h"
 
 typedef struct	s_info
 {
-	char			*N_texpath;
-	char			*S_texpath;
-	char			*W_texpath;
-	char			*E_texpath;
-	int				texWidth;
-	int				texHeight;
+	char	*N_texpath;
+	char	*S_texpath;
+	char	*W_texpath;
+	char	*E_texpath;
+
+	int		texWidth;
+	int		texHeight;
+
 	//hexadecimal color
-	unsigned int	floor_color;
-	unsigned int	ceiling_color;
+	int		floor_color;
+	int		ceiling_color;
 
+	int		mapWidth;
+	int		mapHeight;
+	char	**map;
 
-	int				mapWidth;
-	int				mapHeight;
-	char			**map;
-	int				point_of_view;
-}				t_info;
+	char	player_view;
+	int 	player_x;
+	int		player_y;
 
-void	executer(t_info *info);
+}			t_info;
+
+void	exit_with_error(char *msg);
+void	malloc_check(void *value);
+void	null_check(void *value, char *msg);
 
 #endif
