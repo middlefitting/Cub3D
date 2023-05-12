@@ -12,6 +12,7 @@ void	set_wall_draw_point(t_ray_info ray_info, t_wall_info *wall_info)
 
 void	set_wall_texture(t_textures textures, t_ray_info ray_info, t_wall_info *wall_info)
 {
+	//y축
 	if (ray_info.side == 0)
 	{
 		if (ray_info.ray_dir_x >= 0)
@@ -40,8 +41,8 @@ void	set_tex_x(t_ray ray, t_ray_info ray_info, t_wall_info *wall_info)
 		wall_x -= floor(wall_x);
 
 		wall_info->tex_x = (int)(wall_x * (double) wall_info->texture->width);
-		if ((ray_info.side == 0 && ray_info.ray_dir_x >= 0)
-		|| (ray_info.side == 1 && ray_info.ray_dir_y < 0))
+		if ((ray_info.side == 0 && ray_info.ray_dir_x < 0)
+		|| (ray_info.side == 1 && ray_info.ray_dir_y >= 0))
 			wall_info->tex_x = wall_info->texture->width - wall_info->tex_x - 1;
 }
 

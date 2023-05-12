@@ -17,7 +17,7 @@ void	set_delta_dist(t_ray_info *ray_info)
 	// 어떻게 할지 결정
 	// ray_info->delta_dist_x = fabs(1 / ray_info->ray_dir_x);
 	// ray_info->delta_dist_y = fabs(1 / ray_info->ray_dir_y);
-	////////////
+	////////////0나누기 괜찮나
 	ray_info->delta_dist_x = sqrt(1 + (ray_info->ray_dir_y * ray_info->ray_dir_y) / (ray_info->ray_dir_x * ray_info->ray_dir_x));
 	ray_info->delta_dist_y = sqrt(1 + (ray_info->ray_dir_x * ray_info->ray_dir_x) / (ray_info->ray_dir_y * ray_info->ray_dir_y));
 }

@@ -27,6 +27,7 @@ void	dda_logic(t_data *data, t_ray_info *ray_info)
 	}
 }
 
+
 void	set_perp_wall_dist(t_ray ray, t_ray_info *ray_info)
 {
 	if (ray_info->side == 0)
