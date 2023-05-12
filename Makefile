@@ -4,8 +4,17 @@ SRC_FILES	=	main.c \
 				/lib/error.c \
 				/executer/executer.c \
 				/executer/init/init_game_data.c \
-				/executer/init/init_ray.c \
-				/executer/init/init_texture.c
+				/executer/init/init_texture.c \
+				/executer/game/game.c \
+				/executer/game/raycasting/raycasting.c \
+				/executer/game/raycasting/dda_init.c \
+				/executer/game/raycasting/set_wall_buffer.c \
+				/executer/react/finish_game.c \
+				/executer/react/press_events.c \
+				/executer/react/release_events.c \
+				/executer/game/actions/actions.c \
+				/executer/game/actions/mv_actions.c \
+				/executer/game/actions/rotate_actions.c
 
 SRC_DIR		=	src/
 
@@ -64,8 +73,8 @@ $(NAME): $(OBJS) $(MLX) $(LIBFT)
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
 	@echo "$(CYAN)Compiling...        [$@]$(RESET)"
-	@$(CC) $(CFLAGS) -Iinclude -o $@ -c $<
 	@printf "$(UP)$(CUT)"
+	@$(CC) $(CFLAGS) -Iinclude -o $@ -c $<
 
 
 $(MLX) :

@@ -30,10 +30,12 @@ void	init_texture(t_texture *texture, char *texture_path, void *mlx)
 {
 	t_img	img;
 
-	// img.img = mlx_xpm_file_to_image(mlx, texture_path, &texture->width, &texture->height);
-	img.img = mlx_png_file_to_image(mlx, texture_path, &texture->width, &texture->height);
+	img.img = mlx_xpm_file_to_image(mlx, texture_path, &texture->width, &texture->height);
+	// img.img = mlx_png_file_to_image(mlx, texture_path, &texture->width, &texture->height);
 	null_check(img.img, "mlx file to image failed");
 	img.data = (int *) mlx_get_data_addr(img.img, &img.bpp, &img.size_l, &img.endian);
 	null_check(img.data, "mlx get data addr failed");
 	texture_setting(texture, img.data);
+	//이미지 제거
+	mlx_destroy_image(mlx, img.img);
 }
