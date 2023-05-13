@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   raycasting.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/13 17:27:17 by sechung           #+#    #+#             */
+/*   Updated: 2023/05/13 17:42:02 by sechung          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "execute.h"
 
 void	set_camera_x(t_ray_info *ray_info, int ind)
@@ -27,18 +39,19 @@ void	dda_logic(t_data *data, t_ray_info *ray_info)
 	}
 }
 
-
 void	set_perp_wall_dist(t_ray ray, t_ray_info *ray_info)
 {
 	if (ray_info->side == 0)
-		ray_info->perp_wall_dist = (ray_info->map_x - ray.pos_x + (1 - ray_info->step_x) / 2) / ray_info->ray_dir_x;
+		ray_info->perp_wall_dist = (ray_info->map_x
+				- ray.pos_x + (1 - ray_info->step_x) / 2) / ray_info->ray_dir_x;
 	else
-		ray_info->perp_wall_dist = (ray_info->map_y - ray.pos_y + (1 - ray_info->step_y) / 2) / ray_info->ray_dir_y;
+		ray_info->perp_wall_dist = (ray_info->map_y
+				- ray.pos_y + (1 - ray_info->step_y) / 2) / ray_info->ray_dir_y;
 }
 
 void	set_line_height(t_ray_info *ray_info)
 {
-	ray_info->line_height = (int) (GAME_HEIGHT / ray_info->perp_wall_dist);
+	ray_info->line_height = (int)(GAME_HEIGHT / ray_info->perp_wall_dist);
 }
 
 void	raycasting(t_data *data)

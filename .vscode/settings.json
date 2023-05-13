@@ -13,6 +13,9 @@
 		"cmath": "c",
 		"complex": "c",
 		"math.h": "c",
-		"parsing.h": "c"
+		"parsing.h": "c",
+		"get_next_line.h": "c",
+		"stdio.h": "c",
+		"fcntl.h": "c"
 	}
 }

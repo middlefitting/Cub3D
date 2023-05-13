@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 12:55:51 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 15:25:31 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:09:25 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./get_next_line.h"
+#include "get_next_line.h"
 
 int	ftt_len_or_chr(char *s, int flag)
 {
@@ -26,7 +26,7 @@ int	ftt_len_or_chr(char *s, int flag)
 	else if (flag == 1)
 	{
 		while (s[i])
-		{	
+		{
 			if ((unsigned char)s[i] == '\n')
 				return (i);
 			i ++;
@@ -37,9 +37,9 @@ int	ftt_len_or_chr(char *s, int flag)
 		return (0);
 }
 
-char	*node_free(t_list **list, t_list *node, int flag)
+char	*node_free(t_gnl_list **list, t_gnl_list *node, int flag)
 {
-	t_list	*tmp;
+	t_gnl_list	*tmp;
 
 	tmp = *list;
 	while (tmp->next)
@@ -64,11 +64,11 @@ char	*node_free(t_list **list, t_list *node, int flag)
 	return (0);
 }
 
-t_list	*init_node(int fd)
+t_gnl_list	*init_node(int fd)
 {
-	t_list	*new;
+	t_gnl_list	*new;
 
-	new = malloc(sizeof(t_list));
+	new = malloc(sizeof(t_gnl_list));
 	if (fd != -1)
 		new->save = ftt_calloc(1, 1);
 	new->fd = fd;
@@ -77,9 +77,9 @@ t_list	*init_node(int fd)
 	return (new);
 }
 
-t_list	*make_node(t_list **headp, int fd)
+t_gnl_list	*make_node(t_gnl_list **headp, int fd)
 {
-	t_list	*tmp;
+	t_gnl_list	*tmp;
 
 	if (!*headp)
 		*headp = init_node(-1);
@@ -93,9 +93,9 @@ t_list	*make_node(t_list **headp, int fd)
 			if (tmp->bytes == -1)
 				return ((void *)node_free(headp, tmp, 1));
 			return (tmp);
-		}	
+		}
 		if (!(tmp->next))
-		{	
+		{
 			tmp->next = init_node(fd);
 			if (!tmp->next)
 				return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:10:47 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 15:25:31 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:52:41 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,35 +15,8 @@
 
 # include <stdio.h>
 # include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "./get_next_line/get_next_line.h"
-
-// #define width 640
-// #define height 480
-
-typedef struct s_info
-{
-	char	*N_texpath;
-	char	*S_texpath;
-	char	*W_texpath;
-	char	*E_texpath;
-
-	int		texWidth;
-	int		texHeight;
-
-	int		floor_color;
-	int		ceiling_color;	
-
-	int		map_start_idx;
-	int		mapWidth;
-	int		mapHeight;
-	char	**map;
-
-	char	player_view;
-	int		player_x;
-	int		player_y;
-}				t_info;
+# include "get_next_line.h"
+# include "cub3d.h"
 
 void	check_map_valid(t_info *info);
 void	step1(t_info *info, int fd);

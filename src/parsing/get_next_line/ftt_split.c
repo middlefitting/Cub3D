@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftt_split.c                                         :+:      :+:    :+:   */
+/*   ftt_split.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 00:33:34 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 13:57:22 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:36:02 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./get_next_line.h"
+#include "get_next_line.h"
 
 size_t	count(char const *s, char c)
 {
@@ -77,7 +77,7 @@ size_t	word_len(char const *s, char c)
 
 char	**ftt_split(char const *s, char c)
 {
-	char	**str;	
+	char	**str;
 	size_t	i;
 
 	if (!s)
@@ -87,7 +87,7 @@ char	**ftt_split(char const *s, char c)
 		return (0);
 	i = 0;
 	while (*s)
-	{	
+	{
 		while ((*s == c) && *s)
 			s ++;
 		if (*s != c && *s)

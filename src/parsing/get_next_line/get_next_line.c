@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 23:14:59 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 15:25:31 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:09:48 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./get_next_line.h"
+#include "get_next_line.h"
 
 void	ftt_bzero(void *s, size_t n)
 {
@@ -44,7 +44,7 @@ void	*ftt_calloc(size_t count, size_t size)
 }
 
 char	*ftt_strjoin(char *s1, char *s2)
-{			
+{
 	char	*newstr;
 	char	*temp;
 	int		i;
@@ -91,13 +91,13 @@ char	*ftt_substr(char **save, int s_i)
 
 char	*get_next_line(int fd)
 {
-	static t_list	*head = 0;
-	t_list			*node;
+	static t_gnl_list	*head = 0;
+	t_gnl_list			*node;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (0);
 	while (1)
-	{	
+	{
 		node = make_node(&head, fd);
 		if (!(long long)node)
 			return (0);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   game.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/13 17:31:24 by sechung           #+#    #+#             */
+/*   Updated: 2023/05/13 17:32:07 by sechung          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "execute.h"
 
 void	floor_ceiling(t_window *window, t_textures textures)
@@ -11,7 +23,6 @@ void	floor_ceiling(t_window *window, t_textures textures)
 	{
 		while (j < GAME_WIDTH)
 		{
-			// 왜 반대인지 알아내기
 			if (i >= GAME_HEIGHT / 2)
 				window->buf[i][j] = textures.floor_color;
 			else
@@ -45,14 +56,14 @@ void	draw_window(t_window window)
 
 void	correction_position(t_ray *ray)
 {
-	while (ray->pos_x - (double) ((int) ray->pos_x) >= 0.99999)
-        ray->pos_x += 0.00001;
-    while (ray->pos_x - (double) ((int) ray->pos_x) <= 0.00001)
-        ray->pos_x += 0.00001;
-	while (ray->pos_y - (double) ((int) ray->pos_y) >= 0.99999)
-        ray->pos_y += 0.00001;
-    while (ray->pos_y - (double) ((int) ray->pos_y) <= 0.00001)
-        ray->pos_y += 0.00001;
+	while (ray->pos_x - (double)((int) ray->pos_x) >= 0.99999)
+		ray->pos_x += 0.00001;
+	while (ray->pos_x - (double)((int) ray->pos_x) <= 0.00001)
+		ray->pos_x += 0.00001;
+	while (ray->pos_y - (double)((int) ray->pos_y) >= 0.99999)
+		ray->pos_y += 0.00001;
+	while (ray->pos_y - (double)((int) ray->pos_y) <= 0.00001)
+		ray->pos_y += 0.00001;
 }
 
 int	game(t_data *data)

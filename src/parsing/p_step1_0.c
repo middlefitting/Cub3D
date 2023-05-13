@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_step1_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 20:56:13 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 15:25:31 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:47:16 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	push_new_line(t_info *info, int fd)
 		}
 		else
 		{
-			info->mapWidth = ftt_strlen(line) - 1;
+			info->map_width = ftt_strlen(line) - 1;
 			free(line);
 			break ;
 		}
@@ -86,7 +86,7 @@ void	check_map_info(t_info *info, int fd)
 		}
 		free(line);
 	}
-	info->mapHeight = h;
+	info->map_height = h;
 	close(fd);
 }
 

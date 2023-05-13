@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   actions.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/13 17:21:43 by sechung           #+#    #+#             */
+/*   Updated: 2023/05/13 17:22:09 by sechung          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "execute.h"
 
 void	default_action(t_data *data)
@@ -13,8 +25,9 @@ void	esc_action(t_data *data)
 
 void	do_actions(void (*events[])(t_data*), t_data *data)
 {
-	int	key_num = 0;
+	int	key_num;
 
+	key_num = 0;
 	while (key_num < 256)
 	{
 		if (data->press[key_num] == TRUE)
