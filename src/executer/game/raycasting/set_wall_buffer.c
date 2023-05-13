@@ -10,22 +10,22 @@ void	set_wall_draw_point(t_ray_info ray_info, t_wall_info *wall_info)
 		wall_info->draw_end = GAME_HEIGHT - 1;
 }
 
-void	set_wall_texture(t_textures textures, t_ray_info ray_info, t_wall_info *wall_info)
+void	set_wall_texture(t_textures *textures, t_ray_info ray_info, t_wall_info *wall_info)
 {
 	//y축
 	if (ray_info.side == 0)
 	{
 		if (ray_info.ray_dir_x >= 0)
-			wall_info->texture = &textures.east_wall;
+			wall_info->texture = &textures->east_wall;
 		else
-			wall_info->texture = &textures.west_wall;
+			wall_info->texture = &textures->west_wall;
 	}
 	else
 	{
 		if (ray_info.ray_dir_y >= 0)
-			wall_info->texture = &textures.south_wall;
+			wall_info->texture = &textures->south_wall;
 		else
-			wall_info->texture = &textures.north_wall;
+			wall_info->texture = &textures->north_wall;
 	}
 }
 
@@ -107,7 +107,7 @@ void	set_wall_buffer(t_data *data, t_ray_info ray_info, int i)
 	t_wall_info wall_info;
 
 	set_wall_draw_point(ray_info, &wall_info);
-	set_wall_texture(data->textures, ray_info, &wall_info);
+	set_wall_texture(&data->textures, ray_info, &wall_info);
 	set_tex_x(data->ray, ray_info, &wall_info);
 	set_wall_buffer_logic(&data->window, ray_info, &wall_info, i);
 }

@@ -76,7 +76,7 @@ void	executer(t_info *info) {
 	t_data	*data;
 
 	//
-	sample(info);
+	// sample(info);
 	//
 	calloc_data(&data);
 	init_game_data(data, info);

@@ -4,7 +4,7 @@
 #include "../mlx/mlx.h"
 #include "constant.h"
 
-typedef struct	s_info
+typedef struct s_info
 {
 	char	*N_texpath;
 	char	*S_texpath;
@@ -14,19 +14,18 @@ typedef struct	s_info
 	int		texWidth;
 	int		texHeight;
 
-	//hexadecimal color
 	int		floor_color;
 	int		ceiling_color;
 
+	int		map_start_idx;
 	int		mapWidth;
 	int		mapHeight;
 	char	**map;
 
 	char	player_view;
-	int 	player_x;
+	int		player_x;
 	int		player_y;
-
-}			t_info;
+}				t_info;
 
 void	exit_with_error(char *msg);
 void	malloc_check(void *value);

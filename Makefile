@@ -27,7 +27,7 @@ SRC_FILES	=	main.c \
 				/parsing/get_next_line/get_next_line.c\
 				/parsing/get_next_line/get_next_line_utils.c\
 				/parsing/get_next_line/ftt_split.c\
-			
+
 SRC_DIR		=	src/
 
 SCRS		=	$(addprefix $(SRC_DIR), $(SRC_FILES))
@@ -42,13 +42,13 @@ MLX_DIR		=	mlx
 
 # MLX_FLAGS	=	-framework OpenGL -framework Appkit
 
-MLX_FLAGS	=	-lz -framework OpenGL -framework Appkit
+MLX_FLAGS	=	-framework OpenGL -framework Appkit
 
 LIBFT 		= 	libft/libft.a
 
 LIB_DIR		=	libft
 
-CC			=	cc -g
+CC			=	cc -g3 -fsanitize=address
 
 CFLAGS		=	-Wall -Wextra -Werror
 
