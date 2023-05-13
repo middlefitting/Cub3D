@@ -1,5 +1,42 @@
 #include "execute.h"
 
+void	dir_and_plane_setting(t_ray *ray, char player_view)
+{
+	if (player_view == 'N')
+	{
+		ray->dir_y = -1.0;
+		ray->plane_x = -0.66;
+	}
+	else if (player_view == 'S')
+	{
+		ray->dir_y = 1.0;
+		// ray->plane_x = -0.66;
+		ray->plane_x = 0.66;
+	}
+	else if (player_view == 'W')
+	{
+		ray->dir_x = -1.0;
+		ray->plane_y = -0.66;
+	}
+	else
+	{
+		ray->dir_x = 1.0;
+		// ray->plane_y = -0.66;
+		ray->plane_y = 0.66;
+	}
+}
+
+void	init_ray(t_ray *ray, t_info *info)
+{
+	ray->pos_x = info->player_x;
+	ray->pos_y = info->player_y;
+	ray->dir_x = 0.0;
+	ray->dir_y = 0.0;
+	ray->plane_x = 0.0;
+	ray->plane_y = 0.0;
+	dir_and_plane_setting(ray, info->player_view);
+}
+
 void	init_textures(t_data *data, t_info *info)
 {
 	data->textures.ceiling_color = info->ceiling_color;
@@ -19,6 +56,8 @@ void	init_window(t_window *window)
 	null_check(window->img.img, "mlx new image failed");
 	window->img.data = (int *) mlx_get_data_addr(window->img.img, &window->img.bpp, &window->img.size_l, &window->img.endian);
 	null_check(window->img.data, "mlx get data addr failed");
+	//title mlx -> cub3d로 수정하기
+	window->win = mlx_new_window(window->mlx, GAME_WIDTH, GAME_HEIGHT, "mlx");
 }
 
 void	init_game_data(t_data *data, t_info *info)

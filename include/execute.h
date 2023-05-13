@@ -2,7 +2,7 @@
 # define EXECUTE_H
 
 #include "cub3d.h"
-
+#include "math.h"
 
 typedef struct	s_img
 {
@@ -54,19 +54,75 @@ typedef struct	s_textures
 	unsigned int	ceiling_color;
 }				t_textures;
 
+// typedef struct	s_press
+// {
+// 	t_bool	press[256];
+// }				t_press;
+
 typedef struct	s_data
 {
 	t_ray		ray;
 	t_window	window;
 	t_textures	textures;
 	char		**map;
+	t_bool		press[256];
 }				t_data;
+
+typedef struct	s_ray_info
+{
+	double	camera_x;
+	double	ray_dir_x;
+	double	ray_dir_y;
+	int		map_x;
+	int		map_y;
+	double	side_dist_x;
+	double	side_dist_y;
+	double	delta_dist_x;
+	double	delta_dist_y;
+
+	int		step_x;
+	int		step_y;
+	int		hit;
+
+	int		side;
+
+	double	perp_wall_dist;
+	int		line_height;
+}				t_ray_info;
+
+typedef struct	s_wall_info
+{
+	int			draw_start;
+	int			draw_end;
+	t_texture	*texture;
+	int			tex_x;
+}				t_wall_info;
 
 void	executer(t_info *info);
 
 void	init_game_data(t_data *data, t_info *info);
-void	init_ray(t_ray *ray, t_info *info);
+// void	init_ray(t_ray *ray, t_info *info);
 void	init_texture(t_texture *texture, char *texture_path, void *mlx);
 
+int		game(t_data *data);
+// void	floor_ceiling(t_window *window, t_textures textures);
+// void	draw_window(t_window window);
 
+void	raycasting(t_data *data);
+void	dda_init(t_data *data, t_ray_info *ray_info);
+void	set_wall_buffer(t_data *data, t_ray_info ray_info, int i);
+
+int		finish_game(int	num);
+int		press_events(int key_num, t_data *data);
+int		release_events(int key_num, t_data *data);
+
+int		actions(t_data *data);
+
+void	up_action(t_data *data);
+void	down_action(t_data *data);
+void	right_action(t_data *data);
+void	left_action(t_data *data);
+
+void	rotate_right(t_data *data);
+void	rotate_left(t_data *data);
 #endif
