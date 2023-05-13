@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_step1_1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:26:59 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 15:25:31 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 16:39:37 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,8 @@ void	fill_info(char *line, t_info *info)
 		info->ceiling_color = rgb_to_hex(key_value[1]);
 	else
 		exit_with_error("Invalid key or value Error\n");
-	free_double_arr(key_value);
+	free (key_value[0]);
+	free (key_value);
 }
 
 int	line_is_end_of_map(t_info *info, char *line)
@@ -83,7 +84,7 @@ int	line_is_end_of_map(t_info *info, char *line)
 		if (!(line[i] == '1' || line[i] == ' '))
 			return (0);
 		i++;
-	}	
+	}
 	return (1);
 }
 

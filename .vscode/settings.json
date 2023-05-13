@@ -12,6 +12,7 @@
 		"struct.h": "c",
 		"cmath": "c",
 		"complex": "c",
-		"math.h": "c"
+		"math.h": "c",
+		"parsing.h": "c"
 	}
 }
