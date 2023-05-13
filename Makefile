@@ -14,8 +14,20 @@ SRC_FILES	=	main.c \
 				/executer/react/release_events.c \
 				/executer/game/actions/actions.c \
 				/executer/game/actions/mv_actions.c \
-				/executer/game/actions/rotate_actions.c
-
+				/executer/game/actions/rotate_actions.c\
+				/parsing/p_check_map_valid_0.c\
+				/parsing/p_check_map_valid_1.c\
+				/parsing/p_ftt_func.c\
+				/parsing/p_parsing.c\
+				/parsing/p_step1_0.c\
+				/parsing/p_step1_1.c\
+				/parsing/p_step2_0.c\
+				/parsing/p_step2_1.c\
+				/parsing/p_utill_func.c\
+				/parsing/get_next_line/get_next_line.c\
+				/parsing/get_next_line/get_next_line_utils.c\
+				/parsing/get_next_line/ftt_split.c\
+			
 SRC_DIR		=	src/
 
 SCRS		=	$(addprefix $(SRC_DIR), $(SRC_FILES))
