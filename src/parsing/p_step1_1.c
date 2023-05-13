@@ -6,7 +6,7 @@
 /*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:26:59 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 16:39:37 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/13 17:47:35 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,13 @@ void	fill_info(char *line, t_info *info)
 	if (ftt_double_arr_len(key_value) != 2)
 		exit_with_error("Invalid num of key or value Error\n");
 	if (ftt_strcmp(key_value[0], "NO") && key_value[1] != NULL)
-		check_file_open(&info->N_texpath, key_value[1]);
+		check_file_open(&info->n_texpath, key_value[1]);
 	else if (ftt_strcmp(key_value[0], "SO") && key_value[1] != NULL)
-		check_file_open(&info->S_texpath, key_value[1]);
+		check_file_open(&info->s_texpath, key_value[1]);
 	else if (ftt_strcmp(key_value[0], "WE") && key_value[1] != NULL)
-		check_file_open(&info->W_texpath, key_value[1]);
+		check_file_open(&info->w_texpath, key_value[1]);
 	else if (ftt_strcmp(key_value[0], "EA") && key_value[1] != NULL)
-		check_file_open(&info->E_texpath, key_value[1]);
+		check_file_open(&info->e_texpath, key_value[1]);
 	else if (ftt_strcmp(key_value[0], "F") && key_value[1] != NULL)
 		info->floor_color = rgb_to_hex(key_value[1]);
 	else if (ftt_strcmp(key_value[0], "C") && key_value[1] != NULL)
@@ -93,8 +93,8 @@ int	line_is_middle_of_map(t_info *info, char *line)
 	int	i;
 
 	i = 0;
-	if (info->mapWidth < ftt_strlen(line) - 1)
-		info->mapWidth = ftt_strlen(line) - 1;
+	if (info->map_width < ftt_strlen(line) - 1)
+		info->map_width = ftt_strlen(line) - 1;
 	while (line[i])
 	{
 		if (!(is_space(line[i]) || is_num(line[i]) || \

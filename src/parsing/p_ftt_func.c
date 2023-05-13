@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_ftt_func.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:33:37 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 15:33:40 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:52:55 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,6 @@ void	ftt_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ftt_strlen(s));
 }
-
-// void	exit_with_error(char *msg)
-// {
-// 	ftt_putstr_fd("Cub3D: program exit by ", 2);
-// 	ftt_putstr_fd(msg, 2);
-// 	exit(1);
-// }
 
 int	ftt_atoi(char *str)
 {

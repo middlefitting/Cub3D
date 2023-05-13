@@ -22,7 +22,6 @@ SRC_FILES	=	main.c \
 				/parsing/p_step1_0.c\
 				/parsing/p_step1_1.c\
 				/parsing/p_step2_0.c\
-				/parsing/p_step2_1.c\
 				/parsing/p_utill_func.c\
 				/parsing/get_next_line/get_next_line.c\
 				/parsing/get_next_line/get_next_line_utils.c\
@@ -39,8 +38,6 @@ OBJS		=	$(addprefix $(OBJ_DIR), $(patsubst %.c,%.o,$(SRC_FILES)))
 MLX			=	mlx/libmlx.a
 
 MLX_DIR		=	mlx
-
-# MLX_FLAGS	=	-framework OpenGL -framework Appkit
 
 MLX_FLAGS	=	-framework OpenGL -framework Appkit
 

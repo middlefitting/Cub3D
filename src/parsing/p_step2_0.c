@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_step2_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 20:56:54 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 14:45:11 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:47:54 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	fill_map(t_info *info, int fd)
 	char	*line;
 
 	i = 0;
-	info->map = (char **)malloc(sizeof(char *) * (info->mapHeight + 1));
+	info->map = (char **)malloc(sizeof(char *) * (info->map_height + 1));
 	while (1)
 	{
 		line = get_next_line(fd);
@@ -62,9 +62,9 @@ void	fill_map(t_info *info, int fd)
 		if (line_is_new_line(line))
 			free(line);
 		else
-			info->map[i++] = strdup_len(info->mapWidth, line);
+			info->map[i++] = strdup_len(info->map_width, line);
 	}
-	info->map[info->mapHeight] = NULL;
+	info->map[info->map_height] = NULL;
 	close(fd);
 }
 

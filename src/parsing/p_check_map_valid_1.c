@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_check_map_valid_1.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:29:12 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 13:59:07 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/13 17:50:38 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	check_linking_zereos(t_info *info, int i, int j)
 		if (map[i - 1][j] == '0')
 			exit_with_error("Map is not surrounded Error\n");
 	}
-	if (i != info->mapHeight - 1)
+	if (i != info->map_height - 1)
 	{
 		if (map[i + 1][j] == '0')
 			exit_with_error("Map is not surrounded Error\n");
@@ -53,7 +53,7 @@ void	check_linking_zereos(t_info *info, int i, int j)
 		if (map[i][j - 1] == '0')
 			exit_with_error("Map is not surrounded Error\n");
 	}
-	if (j != info->mapWidth - 1)
+	if (j != info->map_width - 1)
 	{
 		if (map[i][j + 1] == '0')
 			exit_with_error("Map is not surrounded Error\n");
@@ -64,8 +64,8 @@ void	check_zero_on_side(t_info *info, int i, int j)
 {
 	if (info->map[i][j] == '0')
 	{
-		if (i == 0 || i == info->mapHeight - 1 || \
-		j == 0 || j == info->mapWidth - 1)
+		if (i == 0 || i == info->map_height - 1 || \
+		j == 0 || j == info->map_width - 1)
 			exit_with_error("Zero is on side Error\n");
 	}
 }
