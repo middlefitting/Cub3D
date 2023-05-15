@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_step1_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 20:56:13 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 15:56:32 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/15 16:27:58 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	push_new_line(t_info *info, int fd)
 		line = get_next_line(fd);
 		info->map_start_idx++;
 		if (line == NULL)
-			exit_with_error("map is not exist Error");
+			exit_with_error("map is not exist");
 		else if (line_is_new_line(line))
 		{
 			free(line);
@@ -94,8 +94,6 @@ void	check_map_info(t_info *info, int fd)
 
 void	check_map_size(t_info *info)
 {
-	if (info->map_width < 5 || info->map_height < 5)
-		exit_with_error("map size is too small error");
 	if (info->map_width > 1000 || info->map_height > 1000)
 		exit_with_error("map size is too big error");
 }

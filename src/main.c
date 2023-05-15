@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:26:30 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 14:41:50 by middlefitti      ###   ########.fr       */
+/*   Updated: 2023/05/15 16:16:39 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	check_argv_invalid(int ac, char **av)
 		if (ft_strcmp(av[1] + i - 4, ".cub") != 0)
 			exit_with_error("invalid cub file error");
 	}
-
 }
 
 int	main(int ac, char **av)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_utill_func.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
+/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 12:48:46 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 14:49:41 by middlefitti      ###   ########.fr       */
+/*   Updated: 2023/05/15 16:21:56 by sechung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	check_file_open(char **path, char *value)
 	int	end;
 
 	if (*path != NULL)
-		exit_with_error("tex File path exist\n");
+		exit_with_error("tex File path exist");
 	*path = value;
 	end = ftt_strlen(*path);
 	path[0][end - 1] = '\0';
 	fd = open(*path, O_RDONLY);
 	if (fd == -1)
-		exit_with_error("tex File open Error\n");
+		exit_with_error("tex File open");
 	close(fd);
 }
 
@@ -34,7 +34,7 @@ int	cub_file_open(char *path)
 
 	fd = open(path, O_RDONLY);
 	if (fd == -1)
-		exit_with_error("cub File open Error\n");
+		exit_with_error("cub File open");
 	return (fd);
 }
 
