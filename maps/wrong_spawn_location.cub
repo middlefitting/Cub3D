@@ -1,7 +1,7 @@
-NO ./textures/brick-texture-png-23885.png
-SO ./textures/brick-texture-png-23868.png
-WE ./textures/brick-texture-png-23873.png
-EA ./textures/brick-texture-png-23887.png
+NO ./textures/AnyConv.com__brick-texture-png-23868.xpm
+SO ./textures/AnyConv.com__brick-texture-png-23873.xpm
+WE ./textures/AnyConv.com__brick-texture-png-23885.xpm
+EA ./textures/AnyConv.com__brick-texture-png-23887.xpm
 
 C 115,215,225
 F 74,160,44

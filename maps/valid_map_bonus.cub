@@ -1,7 +1,7 @@
-NO ./textures/ice_north.png
-SO ./textures/ice_south.png
-WE ./textures/ice_west.png
-EA ./textures/ice_east.png
+NO ./textures/AnyConv.com__brick-texture-png-23868.xpm
+SO ./textures/AnyConv.com__brick-texture-png-23873.xpm
+WE ./textures/AnyConv.com__brick-texture-png-23885.xpm
+EA ./textures/AnyConv.com__brick-texture-png-23887.xpm
 
 C 115,215,225
 F 200,233,233

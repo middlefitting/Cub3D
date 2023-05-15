@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_check_map_valid_1.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:29:12 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:50:38 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:49:16 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./parsing.h"
+#include "parsing.h"
 
 int	is_space(char c)
 {

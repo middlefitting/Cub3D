@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_step2_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 20:56:54 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 12:47:50 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/15 14:49:38 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./parsing.h"
+#include "parsing.h"
 
 void	push_before_map(int map_start_idx, int fd)
 {

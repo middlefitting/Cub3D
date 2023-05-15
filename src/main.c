@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:26:30 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 12:09:25 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/15 14:41:50 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "execute.h"
-#include "stdio.h"
+#include "parsing.h"
 
 void	check_argv_invalid(int ac, char **av)
 {
@@ -31,12 +31,8 @@ void	check_argv_invalid(int ac, char **av)
 		if (ft_strcmp(av[1] + i - 4, ".cub") != 0)
 			exit_with_error("invalid cub file error");
 	}
-	
+
 }
-
-void	parsing(t_info *info, char *path);
-
-
 
 int	main(int ac, char **av)
 {

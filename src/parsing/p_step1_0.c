@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_step1_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 20:56:13 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:47:16 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:49:25 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./parsing.h"
+#include "parsing.h"
 
 void	fill_info(char *line, t_info *info);
 int		line_is_end_of_map(t_info *info, char *line);
