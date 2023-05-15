@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: middlefitting <middlefitting@student.42    +#+  +:+       +#+         #
+#    By: sechung <sechung@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 20:38:13 by sechung           #+#    #+#              #
-#    Updated: 2023/05/09 00:19:44 by middlefitti      ###   ########.fr        #
+#    Updated: 2023/05/15 15:19:01 by sechung          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
