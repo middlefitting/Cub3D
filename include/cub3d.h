@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:37:41 by sechung           #+#    #+#             */
-/*   Updated: 2023/05/13 17:44:19 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 15:54:14 by tyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ typedef struct s_info
 	char	*s_texpath;
 	char	*w_texpath;
 	char	*e_texpath;
-
-	int		tex_width;
-	int		tex_height;
 
 	int		floor_color;
 	int		ceiling_color;
