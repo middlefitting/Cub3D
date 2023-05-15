@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ftt_split.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 00:33:34 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:36:02 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:50:08 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ size_t	count(char const *s, char c)
 char	*strdup1(char const *src, size_t l)
 {
 	char	*p;
-	size_t	n;
 	size_t	i;
 
 	i = 0;
-	n = 0;
 	p = (char *)malloc(sizeof(char) * (l + 1));
 	if (!p)
 		return (0);

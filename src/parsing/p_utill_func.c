@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_utill_func.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 12:48:46 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 12:52:37 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/15 14:49:41 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./parsing.h"
+#include "parsing.h"
 
 void	check_file_open(char **path, char *value)
 {

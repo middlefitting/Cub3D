@@ -1,6 +1,6 @@
-NO ./textures/brick-texture-png-23885.png
-SO ./textures/brick-texture-png-23868.png
-WO ./textures/brick-texture-png-23873.png
+NO ./textures/brick-texture-png-23868.png
+SO ./textures/brick-texture-png-23873.png
+WE ./textures/brick-texture-png-23885.png
 EA ./textures/brick-texture-png-23887.png
 
 C 115,215,225

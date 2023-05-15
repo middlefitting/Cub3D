@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:10:47 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:52:41 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:42:10 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "get_next_line.h"
 # include "cub3d.h"
 
+void	parsing(t_info *info, char *path);
 void	check_map_valid(t_info *info);
 void	step1(t_info *info, int fd);
 void	step2(t_info *info, int fd);

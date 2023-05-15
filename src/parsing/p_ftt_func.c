@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_ftt_func.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:33:37 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:52:55 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:49:19 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./parsing.h"
+#include "parsing.h"
 
 void	ftt_putstr_fd(char *s, int fd)
 {

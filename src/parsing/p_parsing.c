@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   p_parsing.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: middlefitting <middlefitting@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 20:22:43 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:47:00 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:49:22 by middlefitti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./parsing.h"
+#include "parsing.h"
 
 void	free_double_arr(char **arr)
 {

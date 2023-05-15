@@ -45,7 +45,7 @@ LIBFT 		= 	libft/libft.a
 
 LIB_DIR		=	libft
 
-CC			=	cc -g3 -fsanitize=address
+CC			=	cc
 
 CFLAGS		=	-Wall -Wextra -Werror
 
