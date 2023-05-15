@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_step1_1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:26:59 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:47:35 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 12:17:15 by tyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ unsigned int	rgb_to_hex(char *rgb)
 		exit_with_error("RGB value is not valid Error\n");
 	r = ftt_atoi(rgb_arr[0]);
 	g = ftt_atoi(rgb_arr[1]);
+	if (rgb_arr[2][0] == '\n')
+		exit_with_error("RGB value is not valid Error\n");
 	b = ftt_atoi(rgb_arr[2]);
 	if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255)
 		exit_with_error("RGB value is not valid Error\n");
