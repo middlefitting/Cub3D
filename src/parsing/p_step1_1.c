@@ -6,7 +6,7 @@
 /*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 21:26:59 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/15 12:17:15 by tyi              ###   ########.fr       */
+/*   Updated: 2023/05/15 12:55:05 by tyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int	line_is_middle_of_map(t_info *info, char *line)
 	{
 		if (!(is_space(line[i]) || is_num(line[i]) || \
 		is_nswe(line[i]) || line[i] == '\n'))
-			return (0);
+			exit_with_error("Invalid map elem\n");
 		i++;
 	}
 	return (1);
