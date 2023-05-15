@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_utill_func.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 12:48:46 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 18:03:36 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 12:52:37 by tyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	check_file_open(char **path, char *value)
 	int	fd;
 	int	end;
 
+	if (*path != NULL)
+		exit_with_error("tex File path exist\n");
 	*path = value;
 	end = ftt_strlen(*path);
 	path[0][end - 1] = '\0';

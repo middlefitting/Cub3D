@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   p_step2_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sechung <sechung@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tyi <tyi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 20:56:54 by tyi               #+#    #+#             */
-/*   Updated: 2023/05/13 17:47:54 by sechung          ###   ########.fr       */
+/*   Updated: 2023/05/15 12:47:50 by tyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void	fill_map(t_info *info, int fd)
 
 	i = 0;
 	info->map = (char **)malloc(sizeof(char *) * (info->map_height + 1));
+	if (!info->map)
+		exit_with_error("malloc error");
 	while (1)
 	{
 		line = get_next_line(fd);
